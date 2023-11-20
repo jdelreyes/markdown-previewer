@@ -1,6 +1,6 @@
 import Previewer from "../previewer/Previewer";
 import Editor from "../editor/Editor";
-import { useState, ChangeEvent } from "react";
+import { useState, ChangeEvent, useEffect } from "react";
 
 export default function Main() {
     const [text, setText] = useState<string>('')
@@ -10,7 +10,7 @@ export default function Main() {
     }
 
     return (
-        <main className="main">
+        <main className="flex">
             <Editor onEditorChange={onEditorChange}></Editor>
             <Previewer text={text}></Previewer>
         </main>

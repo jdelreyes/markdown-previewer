@@ -12,7 +12,9 @@ export default function Previewer({ text }: Text) {
 
     return (
         <section>
-            <div id="preview" dangerouslySetInnerHTML={{ __html: markedText }} />
+            <div id="preview"
+                dangerouslySetInnerHTML={{ __html: markedText }}
+                className="prose lg:prose-x prose-slate" />
         </section>
     )
 };
