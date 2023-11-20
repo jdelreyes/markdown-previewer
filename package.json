@@ -10,9 +10,12 @@
     "@types/node": "^16.18.61",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
+    "dompurify": "^3.0.6",
+    "marked": "^10.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "sanitize-html": "^2.11.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -41,6 +44,6 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.3.5"
+    "@types/sanitize-html": "^2.9.4"
   }
 }
