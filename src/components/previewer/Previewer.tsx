@@ -1,11 +1,11 @@
 import sanitizeHtml from 'sanitize-html';
 import { marked } from 'marked'
 
-type Text = {
+type PreviewerProps = {
     text: string
 }
 
-export default function Previewer({ text }: Text) {
+export default function Previewer({ text }: PreviewerProps) {
     const markedText = marked.parse(text);
     // note: only necessary if the form has a submit button
     const cleanText = sanitizeHtml(markedText);

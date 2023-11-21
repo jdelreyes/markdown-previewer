@@ -37,6 +37,9 @@ npm start
 ## Motivation
 > My motivation is to not only get better with writing React, but to get started with writing TypeScript - a syntactic superset of JavaScript
 
+## Issues
+* This is not a mobile-friendly app
+
 ## Author
 [Jerome Delos Reyes](https://github.com/siomao)
 
