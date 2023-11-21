@@ -11,10 +11,11 @@ export default function Previewer({ text }: Text) {
     const cleanText = sanitizeHtml(markedText);
 
     return (
-        <section>
+        <fieldset className='flex-1 bg-white ml-2 p-2'>
+        <legend className="text-2xl font-bold">Previewer</legend>
             <div id="preview"
                 dangerouslySetInnerHTML={{ __html: markedText }}
-                className="prose lg:prose-x prose-slate" />
-        </section>
+                className="prose-sm text-xl prose lg:prose-x prose-slate h-full w-full overflow-y-auto" />
+        </fieldset>
     )
 };
