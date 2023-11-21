@@ -11,7 +11,12 @@ const Editor: React.FC<EditorProps> = ({ onEditorChange, defaultText }: EditorPr
     return (
         <fieldset className="flex-1 bg-white mr-2 p-2 rounded-md border-black border">
             <legend className="text-2xl font-bold mx-4 text-teal-950">Editor</legend>
-            <div className="h-full w-full overflow-scroll ">
+            <label
+                className="h-full w-full overflow-scroll bg-[#161b22] block"
+                htmlFor="editor"
+                id="editorLabel"
+                onMouseEnter={() => { }}
+            >
                 <CodeEditor
                     language='md'
                     id="editor"
@@ -20,7 +25,7 @@ const Editor: React.FC<EditorProps> = ({ onEditorChange, defaultText }: EditorPr
                     onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => onEditorChange(event)}
                     style={{ fontSize: 20 }}
                 />
-            </div>
+            </label>
         </fieldset>
     );
 };
