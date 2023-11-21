@@ -12,7 +12,7 @@ export default function Previewer({ text }: Text) {
 
     return (
         <fieldset className='flex-1 bg-white ml-2 p-2 rounded-md border-black border'>
-        <legend className="text-2xl font-bold mx-4">Previewer</legend>
+        <legend className="text-2xl font-bold mx-4 text-teal-950">Previewer</legend>
             <div id="preview"
                 dangerouslySetInnerHTML={{ __html: markedText }}
                 className="prose-sm text-xl prose lg:prose-x prose-slate h-full w-full overflow-y-auto" />
