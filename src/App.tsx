@@ -1,15 +1,15 @@
-import React from 'react';
-import Header from './components/layout/Header';
-import Footer from './components/layout/Footer';
-import Main from './components/main/Main';
+import React from "react";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
+import Main from "./components/main/Main";
 
 function App() {
   return (
-    <React.Fragment>
+    <div>
       <Header />
       <Main />
       <Footer />
-    </React.Fragment>
+    </div>
   );
 }
 

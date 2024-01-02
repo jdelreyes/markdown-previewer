@@ -3,19 +3,18 @@ import Editor from "../editor/Editor";
 import { useState, ChangeEvent, useEffect } from "react";
 
 export default function Main() {
-    const [text, setText] = useState<string>("");
+  const [text, setText] = useState<string>("");
 
-    const onEditorChange = (event: ChangeEvent<HTMLTextAreaElement>): void => {
-        setText(event.target.value);
-    };
+  const onEditorChange = (event: ChangeEvent<HTMLTextAreaElement>): void => {
+    setText(event.target.value);
+  };
 
-    useEffect(() => {
-        const defaultMarkdown: string =
-            `# Markdown Previewer
+  useEffect(() => {
+    const defaultMarkdown: string = `# Markdown Previewer
 
 ## Installation
 \`\`\`shell
-git clone https://github.com/siomao/markdown-previewer.git
+git clone https://github.com/jdelreyes/markdown-previewer.git
 cd markdown-previewer
 npm install
 \`\`\`
@@ -37,21 +36,18 @@ npm start
 ## Motivation
 > My motivation is to not only get better with writing React, but to get started with writing TypeScript - a syntactic superset of JavaScript
 
-## Issues
-* This is not a mobile-friendly app
-
 ## Author
-[Jerome Delos Reyes](https://github.com/siomao)
+[Jerome Delos Reyes](https://github.com/jdelreyes)
 
 ## Contributing
 Pull Requests are highly appreciated! 😄`;
-        setText(defaultMarkdown);
-    }, []);
+    setText(defaultMarkdown);
+  }, []);
 
-    return (
-        <main className="flex justify-between p-3 h-screen w-screen bg-slate-300">
-            <Editor onEditorChange={onEditorChange} defaultText={text}></Editor>
-            <Previewer text={text}></Previewer>
-        </main>
-    );
+  return (
+    <main className="flex flex-col justify-between p-1 h-screen w-screen lg:flex-row">
+      <Editor onEditorChange={onEditorChange} defaultText={text}></Editor>
+      <Previewer text={text}></Previewer>
+    </main>
+  );
 }

@@ -9,7 +9,7 @@ type EditorProps = {
 const Editor: React.FC<EditorProps> = ({ onEditorChange, defaultText }: EditorProps) => {
 
     return (
-        <fieldset className="flex-1 bg-white mr-2 p-2 rounded-md border-black border">
+        <fieldset className="flex-1 bg-white m-1 p-2 rounded-md border-black border min-w-[300px]">
             <legend className="text-2xl font-bold mx-4 text-teal-950">Editor</legend>
             <label
                 className="h-full w-full overflow-scroll bg-[#161b22] block"
